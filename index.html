@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hotel Transylvania (2012) – B1 Classroom Pack</title>
+<style>
+:root{--bg:#fbf6ee;--card:#fff;--ink:#2a1b3d;--mut:#6b5b7e;--pur:#4a2371;--org:#e8761c;--soft:#f3e8fb;--ok:#2e7d32;--bad:#c62828;--line:#e3d6ee}
+@media(prefers-color-scheme:dark){:root{--bg:#171021;--card:#23182f;--ink:#f3ecf8;--mut:#b9a9cc;--pur:#c9a4f0;--org:#ffa24d;--soft:#2f2140;--ok:#7bd57f;--bad:#ff8a80;--line:#3d2d52}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:19px/1.6 "Segoe UI",system-ui,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#3b1c5a;color:#fff;padding:.6rem 1rem;box-shadow:0 2px 8px #0005}
+.top{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between}
+h1{font:700 1.25rem Georgia,serif;margin:0}
+nav{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+nav button,.tg{font:inherit;font-size:.85rem;border:1px solid #fff6;background:transparent;color:#fff;border-radius:2rem;padding:.25rem .8rem;cursor:pointer}
+nav button.on{background:var(--org);border-color:var(--org);color:#1c0f2b;font-weight:700}
+.tg{display:flex;gap:.4rem;align-items:center}
+.prog{height:6px;background:#fff3;border-radius:3px;margin-top:.5rem;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--org);transition:width .4s}
+.pt{font-size:.8rem;opacity:.9}
+main{max-width:860px;margin:0 auto;padding:1rem}
+.part{display:none}.part.on{display:block}
+h2{font:700 1.7rem/1.2 Georgia,serif;color:var(--pur);margin:1rem 0 .3rem}
+h2 small{display:block;font:500 .9rem "Segoe UI",sans-serif;color:var(--mut)}
+h3{font:700 1.2rem Georgia,serif;color:var(--pur);border-bottom:2px solid var(--org);padding-bottom:.2rem;margin:1.6rem 0 .6rem}
+.sum{background:var(--soft);border-left:5px solid var(--org);padding:.7rem 1rem;border-radius:6px}
+.ex{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.2rem 1rem 1rem;margin-top:1.4rem}
+.voc{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.6rem}
+.voc li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;font-size:.95rem}
+.voc em{display:block;color:var(--mut)}
+ol,ul{padding-left:1.4rem}li{margin:.5rem 0}
+.q{padding:.3rem .5rem;border-radius:6px}
+.q.ok{background:#2e7d3222}.q.bad{background:#c6282822}
+.res{font-weight:700}.q.ok .res{color:var(--ok)}.q.bad .res{color:var(--bad)}
+select,input{font:inherit;font-size:.95rem;background:var(--card);color:var(--ink);border:1px solid var(--mut);border-radius:6px;padding:.1rem .4rem}
+input{width:9.5rem}
+.ans{display:none;color:var(--ok);font-size:.9rem}
+.sa .ans{display:block}
+.tn{display:none;background:#e8761c22;border:1px dashed var(--org);border-radius:8px;padding:.6rem 1rem;margin:.8rem 0;font-size:.92rem}
+body.teacher .tn{display:block}
+button.b{font:inherit;font-size:.95rem;background:var(--pur);color:var(--bg);border:0;border-radius:8px;padding:.45rem 1rem;cursor:pointer;margin:.3rem .3rem 0 0}
+button.b.o{background:var(--org);color:#1c0f2b}
+.sc{font-weight:700;color:var(--org)}
+.bank{background:var(--soft);padding:.5rem 1rem;border-radius:8px;font-weight:600}
+:focus-visible{outline:3px solid var(--org);outline-offset:2px}
+@media(max-width:560px){body{font-size:17px}input{width:7.5rem}}
+@media print{
+:root{--bg:#fff;--card:#fff;--ink:#000;--pur:#3b1c5a;--soft:#f3e8fb;--mut:#444;--line:#bbb}
+@page{size:A4;margin:14mm}
+header,.bar{display:none}
+body{font-size:11pt;line-height:1.45}
+main{max-width:none;padding:0}
+.part{display:block!important;break-before:page}
+.part:first-child{break-before:auto}
+.ex,.voc li{break-inside:avoid}
+}
+</style></head><body>
+<header><div class="top"><h1>🦇 Hotel Transylvania (2012) · B1</h1>
+<label class="tg"><input type="checkbox" id="tm" style="width:auto"> Teacher mode</label></div>
+<nav id="nav"></nav><div class="prog"><i id="pb"></i></div><div class="pt" id="pt">0 / 6 parts completed</div></header>
+<main id="m"></main>
+<script>
+const L=['🟢','🟡','🔴'];
+const P=[
+{t:"A Safe Place for Monsters",time:"0:00–12:00",
+s:"Dracula builds a hidden hotel where monsters can rest far from humans, after angry villagers destroy his happy home. He raises his daughter Mavis inside its walls. Years later, his monster friends arrive to celebrate her 118th birthday.",
+v:[["refuge","noun","a safe place away from danger","The cave was a refuge from the storm."],["overprotective","adj.","worrying too much about keeping someone safe","My overprotective dad calls me every hour."],["mob","noun","a large, angry crowd","A mob chased the stranger away."],["wander","verb","to walk around without a clear plan","We wandered through the old town."],["forbid","verb","to say that something is not allowed","The school forbids phones in class."]],
+p:["Why might a vampire build a hotel only for monsters?","How might a father behave when his daughter wants more freedom?"],
+k:[["tf","Dracula built the hotel to keep monsters safe from humans.",true],["gap","Mavis is turning ___ years old.","118"],["mc","Who is Mavis’s father?",["Dracula","Frankenstein","Murray"],0],["ord","Put the events in order (1–3).",["Monster guests arrive for the party.","Dracula builds the hotel.","Mavis grows up inside the hotel."],[3,1,2]]],
+d:[[0,"Why did Dracula build the hotel?"],[0,"Name two guests who come to the birthday party."],[1,"Are Dracula’s rules for Mavis fair? Why or why not?"],[1,"Why do some parents worry too much? Was it true in your family?"],[2,"Can fear of the past protect a child, or does it harm her?"]],
+a:"Role-play (pairs): Mavis asks to leave the hotel for one day. Dracula says no. Act out the conversation (6–8 lines each).",
+g:["Permission and prohibition","We use <b>can’t / mustn’t</b> for rules, and <b>be allowed to</b> for permission.",[["Guests ___ bring humans into the hotel. (rule: not OK)","mustn’t|can’t|cannot"],["Mavis is not ___ to go to the village alone.","allowed"],["Dracula says she ___ go outside until she is older.","can’t|mustn’t|cannot"]]],
+tn:"⏱ 40–45 min. Pre-teach ‘overprotective’ with L1 examples. Follow-up: ‘What rule did you hate as a teenager?’ Common mistakes: ‘must not to’; confusing ‘mustn’t’ (forbidden) with ‘don’t have to’ (not necessary)."},
+{t:"The Fake Village",time:"12:00–27:00",
+s:"Mavis asks to see the outside world. Dracula secretly sets up a fake village filled with zombies dressed as scary ‘humans’, hoping she will want to stay home. Meanwhile, a young human backpacker named Johnny wanders into the hotel, and Dracula hides him by pretending he is a monster relative.",
+v:[["disguise","noun/verb","clothes or looks that hide who you are","He wore a disguise to hide his face."],["fake","adj.","not real; made to look real","The money was fake."],["scare","verb","to make someone afraid","Loud noises scare my dog."],["backpacker","noun","a traveller who carries a bag and goes on a cheap trip","The backpacker slept in a hostel."],["suspicious","adj.","feeling that something is not right","She felt suspicious about the stranger."]],
+p:["What will Dracula do when he finds a human in his hotel?","Will Mavis believe the village is real?"],
+k:[["tf","The village trip is completely real.",false],["mc","How does Dracula hide Johnny?",["He says Johnny is a monster relative","He locks Johnny in the cellar","He turns Johnny into a bat"],0],["who","Who prepared zombies to act as villagers?",["Dracula","Johnny","Mavis"],0],["gap","Johnny is a ___ who travels with a bag.","backpacker"]],
+d:[[0,"What is Johnny and why is he at the hotel?"],[0,"What does Mavis want to do?"],[1,"Why does Dracula lie to Mavis instead of telling her the truth?"],[1,"Would you feel nervous in Johnny’s place? Why?"],[2,"Dracula teaches Mavis to fear humans. How do prejudices spread?"],[2,"Is lying ever okay to protect someone you love?"]],
+a:"Writing (5 sentences): You are Mavis. Write a message to a friend about your first trip to the ‘village’. What did you see? How did you feel?",
+g:["Purpose: to / so that","Use <b>to + verb</b> or <b>so that + clause</b> to explain why.",[["Dracula hired zombies ___ scare Mavis.","to|in order to"],["He locks the door ___ she can’t leave.","so that"],["Johnny wears a disguise ___ avoid trouble.","to|in order to"]]],
+tn:"⏱ 45 min. Follow-up: ‘Can you think of a time you told a white lie?’ Common mistakes: ‘for scare’ instead of ‘to scare’; ‘so that’ + infinitive."},
+{t:"Meet “Johnnystein”",time:"27:00–42:00",
+s:"Johnny, now wearing a silly costume, gets close to Mavis, and the two quickly become friends. Dracula watches nervously and tries to keep them apart. Johnny’s cheerful energy surprises the monster guests, who are not used to someone so curious and friendly.",
+v:[["costume","noun","special clothes for a party or a role","Her costume was a green witch dress."],["chat","verb","to talk in a friendly way","We chatted for an hour."],["nervous","adj.","a little afraid or worried","I’m nervous before exams."],["awkward","adj.","uncomfortable and not easy","There was an awkward silence."],["curious","adj.","wanting to learn or know more","The curious child opened every box."]],
+p:["Will Mavis and Johnny like each other?","How will Dracula try to separate them?"],
+k:[["tf","Mavis immediately realizes that Johnny is human.",false],["mc","Which word best describes Johnny?",["Friendly and curious","Quiet and cruel","Lazy and rude"],0],["who","Who tries to keep Mavis and Johnny apart?",["Dracula","Murray","Wayne"],0],["ord","Put the events in order (1–3).",["Guests become curious about the ‘new cousin’.","Dracula gives Johnny a costume.","Johnny and Mavis start talking."],[3,1,2]]],
+d:[[0,"What does Johnny wear to look like a monster?"],[0,"How do the monsters react to Johnny?"],[1,"Why does Dracula feel nervous when Mavis talks to Johnny?"],[1,"Is it easy to talk to a stranger at a party? Tell us about a time."],[2,"Is it fair to judge a whole group by what a few members did?"]],
+a:"Retell (2 minutes): Tell the story of how Mavis and Johnny met. Use: first, then, after that, finally.",
+g:["-ed / -ing adjectives","-ed describes feelings; -ing describes the thing that causes them.",[["Mavis is ___ (excite) about the world.","excited"],["Johnny finds the hotel ___ (fascinate).","fascinating"],["Dracula feels ___ (worry) about his daughter.","worried"]]],
+tn:"⏱ 40 min. Follow-up: ‘Describe a boring film using -ed and -ing words.’ Common mistake: ‘I am boring’ (= I am a boring person) instead of ‘I am bored’."},
+{t:"Jealous Father",time:"42:00–58:00",
+s:"Mavis and Johnny spend more time together, and their connection grows. Dracula feels jealous and tries one trick after another to push Johnny away. Johnny’s fun ideas make the hotel livelier, and the guests start to enjoy themselves in new ways.",
+v:[["jealous","adj.","unhappy because someone has what you want","He felt jealous of his brother’s success."],["trick","noun","a clever act to fool someone","The magician’s trick amazed us."],["connection","noun","a close link between people","They felt a connection at once."],["honest","adj.","telling the truth","She is honest, even when it’s hard."],["sneak","verb","to move quietly so nobody sees you","He sneaked out of the house."]],
+p:["Will Dracula’s tricks work?","Do you think Dracula will tell the truth to his friends?"],
+k:[["tf","Dracula is happy to see Mavis and Johnny together.",false],["gap","Dracula feels ___ when he sees Johnny near Mavis.","jealous|worried|angry|protective|nervous"],["who","Who feels a growing connection with Mavis?",["Johnny","Wayne","Dracula"],0],["mc","How does Dracula deal with Johnny?",["With tricks, not honesty","With a long, open talk","By asking Mavis’s opinion"],0]],
+d:[[0,"What new things does Johnny bring to the hotel?"],[0,"What tricks does Dracula try?"],[1,"Why do tricks not solve Dracula’s problem?"],[1,"Have you ever felt jealous? What did you do?"],[2,"When is protecting someone really controlling them?"]],
+a:"Opinion mini-essay (80–100 words): ‘Dracula should be honest with Mavis.’ Do you agree? Give two reasons.",
+g:["Advice with should / ought to","Use <b>should / shouldn’t / ought to</b> to give advice.",[["Dracula ___ listen to his friends. (advice)","should|ought to"],["You ___ lie to your children. (advice: no)","shouldn’t|should not"],["Mavis ___ to tell her father how she feels.","ought|should"]]],
+tn:"⏱ 40 min. Follow-up: advice ‘roleplay’: one student is Dracula with a problem, the other gives advice. Common mistakes: ‘should to go’; ‘ought’ without ‘to’."},
+{t:"The Truth Comes Out",time:"58:00–75:00",
+s:"The secret becomes a bigger problem. Because of his fear, Dracula pressures Johnny to leave and makes choices without asking Mavis. She is hurt when she realizes how much her father has hidden from her, and they have a painful argument.",
+v:[["trust","noun/verb","to believe someone is honest and reliable","I trust my best friend completely."],["argue","verb","to speak angrily with someone who disagrees","They argued about money."],["truth","noun","what is real and correct","Tell me the truth."],["freedom","noun","the power to choose what you do","Teenagers want more freedom."],["betray","verb","to break someone’s trust","He betrayed his friend’s secret."]],
+p:["How will Mavis feel when she learns the truth?","Will Johnny leave the hotel?"],
+k:[["tf","Mavis is happy to learn she was kept in the dark.",false],["mc","Why is Mavis upset with her father?",["He hid the truth from her","He forgot her birthday","He lost the hotel"],0],["gap","Mavis feels her father doesn’t ___ her.","trust"],["ord","Put the events in order (1–3).",["Dracula thinks about what he has done.","Mavis learns the truth.","Mavis argues with her father."],[3,1,2]]],
+d:[[0,"What does Mavis find out?"],[0,"How does she feel? How do you know?"],[1,"Why is it hard for Dracula to let Mavis make her own choices?"],[1,"Have you ever argued with a parent about freedom?"],[2,"Can trust be rebuilt after a lie? How?"]],
+a:"Role-play: Mavis and Dracula have an honest conversation. Mavis explains how she feels; Dracula tries to explain why he lied.",
+g:["Reported speech","Say what someone said: backshift the verb (am → was, will → would, wants → wanted).",[["‘I am scared,’ said Dracula. → Dracula said he ___ scared.","was"],["‘I will help you,’ said Johnny. → Johnny said he ___ help.","would"],["‘Mavis wants freedom,’ Frank said. → Frank said Mavis ___ freedom.","wanted"]]],
+tn:"⏱ 45 min. Follow-up: students report a classmate’s statements. Common mistakes: ‘He said me’; no backshift; ‘said that he is’."},
+{t:"Letting Go",time:"75:00–91:00",
+s:"Dracula finally understands that his fear has been hurting Mavis. With help from his monster friends, he hurries to fix the situation, apologizes, and learns to trust his daughter. The monsters begin to see humans differently, and the hotel opens to new possibilities.",
+v:[["apologize","verb","to say sorry","He apologized for being late."],["accept","verb","to agree to take or believe something","She accepted the invitation."],["brave","adj.","not afraid to do something difficult","The brave boy saved the cat."],["reunion","noun","a meeting after a long time apart","We had a family reunion."],["let go","phrasal verb","to stop holding or controlling","It’s hard to let go of old habits."]],
+p:["Will Dracula change his mind?","How will the story end for Mavis and Johnny?"],
+k:[["tf","Dracula keeps his secret until the end.",false],["gap","Dracula finally ___ to Mavis.","apologizes|apologises|listens|talks"],["mc","What does Dracula learn?",["Love sometimes means letting go","Humans are always dangerous","Hotels need more rules"],0],["who","Who helps Dracula in the final rush?",["His monster friends","The zombies’ boss","Johnny’s family"],0]],
+d:[[0,"How does the story end?"],[0,"Who helps Dracula, and how?"],[1,"What makes Dracula change his mind?"],[1,"Is the ending realistic? Why or why not?"],[2,"What does ‘letting go’ mean for a parent? Should children always get their way?"]],
+a:"Retell (2 minutes) or write an alternative ending: What if Dracula had not changed his mind?",
+g:["Conditionals (2nd and 3rd)","2nd: <i>If + past, would + verb.</i> 3rd: <i>If + had + past participle, would have + past participle.</i>",[["If I ___ (be) Dracula, I would apologize.","were|was"],["If Dracula had listened, Mavis ___ (not be) so upset.","wouldn’t have been|would not have been"],["If monsters trusted humans, they ___ live without fear.","would|could"]]],
+tn:"⏱ 45 min. Follow-up: ‘If you could change one thing in the film, what would it be?’ Common mistakes: ‘if I would be’; ‘would’ in the if-clause."}
+];
+const FIN=[["Which is more important for a child: safety or freedom? Why?"],["Dracula is afraid of humans, and humans are afraid of monsters. How is prejudice similar in real life?"],["Does the film show that trust must go both ways? Give an example."],["Is Dracula a good father? Defend your opinion."],["Which character changes most in the film, and why?"]];
+const QZ=[["A ___ is a safe place away from danger.","refuge"],["An ___ parent worries too much.","overprotective"],["An angry ___ chased the villagers.","mob"],["Tourists often ___ around old towns.","wander"],["The rules ___ guests from entering the kitchen.","forbid|forbids"],["He wore a ___ so nobody knew him.","disguise"],["The ___ village was built from cardboard.","fake"],["She felt ___ about the stranger at the door.","suspicious"],["Johnny’s silly ___ made everyone laugh.","costume"],["It felt ___ when nobody spoke.","awkward"]];
+function task(k){const[ty,q,x,y]=k;let h,a;
+if(ty=="tf"){h=`${q} <select class="inp" data-a="${x}"><option value="">?</option><option value="true">True</option><option value="false">False</option></select>`;a=x?"True":"False"}
+else if(ty=="mc"||ty=="who"){h=`${q} <select class="inp" data-a="${y}"><option value="">?</option>${x.map((o,j)=>`<option value="${j}">${o}</option>`).join("")}</select>`;a=x[y]}
+else if(ty=="gap"){h=q.replace("___",`<input class="inp" data-a="${x}" autocomplete="off">`);a=x.split("|")[0]}
+else{h=q+'<ol type="A">'+x.map((o,j)=>`<li>${o} <select class="inp" data-a="${y[j]}"><option value="">?</option>${x.map((_,m)=>`<option>${m+1}</option>`).join("")}</select></li>`).join("")+"</ol>";a=x.map((o,j)=>String.fromCharCode(65+j)+" = "+y[j]).join(", ")}
+return `<li class="q">${h}<span class="res"></span><div class="ans">Answer: ${a}</div></li>`}
+const ex=(title,items)=>`<div class="ex"><h3>${title}</h3><ol>${items}</ol><button class="b" onclick="chk(this)">Check</button><span class="sc"></span></div>`;
+const bar=i=>`<div class="bar"><button class="b o" onclick="this.closest('.part').classList.toggle('sa')">Show / hide answers</button><button class="b" onclick="mark(${i})">✓ Mark part complete</button></div>`;
+const m=document.getElementById("m"),nav=document.getElementById("nav"),done=new Set();
+m.innerHTML=P.map((p,i)=>`<section class="part" id="p${i}"><h2>Part ${i+1}: ${p.t}<small>${p.time} (approx.)</small></h2><p class="sum">${p.s}</p>
+<div class="tn">🧑‍🏫 <b>Teacher notes:</b> ${p.tn}</div>
+<h3>1 · Before watching</h3><ul class="voc">${p.v.map(v=>`<li><b>${v[0]}</b> <small>(${v[1]})</small> – ${v[2]}<em>“${v[3]}”</em></li>`).join("")}</ul>
+<p><b>Predict:</b></p><ul>${p.p.map(x=>`<li>${x}</li>`).join("")}</ul>
+${ex("2 · While watching",p.k.map(task).join(""))}
+<h3>3 · Discussion</h3><ul style="list-style:none;padding:0">${p.d.map(d=>`<li>${L[d[0]]} ${d[1]}</li>`).join("")}</ul>
+<h3>4 · After watching</h3><p>${p.a}</p>
+${ex("5 · Language focus: "+p.g[0],`<p style="margin:.5rem 0">${p.g[1]}</p>`+p.g[2].map(s=>task(["gap",s[0],s[1]])).join(""))}
+${bar(i)}</section>`).join("")+
+`<section class="part" id="p6"><h2>Final Section<small>After the film</small></h2>
+<div class="tn">🧑‍🏫 <b>Teacher notes:</b> ⏱ 60 min. Run the quiz as a team game. For the debate, give 5 minutes of preparation and assign sides randomly. Common mistake: using ‘people’ with a singular verb.</div>
+<h3>Summary discussion: themes</h3><ol>${FIN.map(f=>`<li>${f[0]}</li>`).join("")}</ol>
+${ex("Vocabulary review (10 items)",'<p class="bank">Word bank: awkward · costume · disguise · fake · forbid · mob · overprotective · refuge · suspicious · wander</p>'+QZ.map(q=>task(["gap",q[0],q[1]])).join(""))}
+<h3>Project idea</h3><p><b>Class debate:</b> “Parents should protect children from the outside world until they are adults.” Two teams prepare three arguments each, using examples from the film, then debate for 10 minutes. Alternative: write a 150-word review of the film (plot, characters, your opinion, rating).</p>
+<div class="bar"><button class="b o" onclick="this.closest('.part').classList.toggle('sa')">Show / hide answers</button></div></section>`;
+const names=[...P.map((p,i)=>"Part "+(i+1)),"Final"];
+nav.innerHTML=names.map((n,i)=>`<button id="n${i}" onclick="show(${i})">${n}</button>`).join("");
+function show(i){document.querySelectorAll(".part").forEach((e,j)=>e.classList.toggle("on",i==j));document.querySelectorAll("nav button").forEach((b,j)=>b.classList.toggle("on",i==j));scrollTo(0,0)}
+function mark(i){done.has(i)?done.delete(i):done.add(i);names.slice(0,6).forEach((n,j)=>document.getElementById("n"+j).textContent=(done.has(j)?"✓ ":"")+n);document.getElementById("pb").style.width=done.size/6*100+"%";document.getElementById("pt").textContent=done.size+" / 6 parts completed"}
+const nz=s=>s.trim().toLowerCase().replace(/’/g,"'");
+function chk(b){const e=b.closest(".ex");let n=0,t=0;e.querySelectorAll(".q").forEach(q=>{let ok=true;q.querySelectorAll(".inp").forEach(i=>{if(!nz(i.dataset.a).split("|").includes(nz(i.value)))ok=false});q.querySelector(".res").textContent=ok?" ✔":" ✘";q.className="q "+(ok?"ok":"bad");t++;if(ok)n++});e.querySelector(".sc").textContent=" "+n+" / "+t}
+document.getElementById("tm").onchange=e=>document.body.classList.toggle("teacher",e.target.checked);
+show(0);
+</script></body></html>
